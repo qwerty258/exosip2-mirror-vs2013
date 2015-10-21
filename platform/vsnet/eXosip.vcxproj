@@ -271,17 +271,6 @@
     <ClInclude Include="..\..\..\exosip\src\milenage.h" />
     <ClInclude Include="..\..\..\exosip\src\rijndael.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\osip\platform\vsnet\osip2.vcxproj">
-      <Project>{85255507-5d16-4218-85e2-f683bb2f04da}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\osip\platform\vsnet\osipparser2.vcxproj">
-      <Project>{44f46b7e-0e51-4304-9735-330dfbab41e5}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libcares.vcxproj">
-      <Project>{6bce0e64-5a72-4243-b385-88e62c8e398a}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
