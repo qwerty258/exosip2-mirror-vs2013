@@ -1,4 +1,4 @@
-LIBRARY "eXosip2.dll"
+LIBRARY
 
 
 EXPORTS
