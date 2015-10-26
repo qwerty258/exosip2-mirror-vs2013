@@ -3,6 +3,7 @@ LIBRARY
 
 EXPORTS
 
+     eXosip_malloc
      eXosip_init
      eXosip_quit
      eXosip_set_option
