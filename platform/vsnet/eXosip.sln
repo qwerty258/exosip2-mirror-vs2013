@@ -4,6 +4,11 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eXosip", "eXosip.vcxproj", "{4EA67539-9EE9-4065-BD39-87E517FD8262}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sip_reg", "sip_reg.vcxproj", "{76557ABF-407D-431E-85ED-B63AA6016E54}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4EA67539-9EE9-4065-BD39-87E517FD8262} = {4EA67539-9EE9-4065-BD39-87E517FD8262}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -20,6 +25,14 @@ Global
 		{4EA67539-9EE9-4065-BD39-87E517FD8262}.Release|Win32.Build.0 = Release|Win32
 		{4EA67539-9EE9-4065-BD39-87E517FD8262}.Release|x64.ActiveCfg = Release|x64
 		{4EA67539-9EE9-4065-BD39-87E517FD8262}.Release|x64.Build.0 = Release|x64
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Debug|Win32.Build.0 = Debug|Win32
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Debug|x64.ActiveCfg = Debug|x64
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Debug|x64.Build.0 = Debug|x64
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Release|Win32.ActiveCfg = Release|Win32
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Release|Win32.Build.0 = Release|Win32
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Release|x64.ActiveCfg = Release|x64
+		{76557ABF-407D-431E-85ED-B63AA6016E54}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
