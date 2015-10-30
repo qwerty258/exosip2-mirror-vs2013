@@ -175,8 +175,8 @@ main (int argc, char *argv[])
   int nofork = 0;
 
 #if defined(_WIN32_WCE) || defined(WIN32)
-  proxy = osip_strdup ("sip:sip.antisip.com");
-  fromuser = osip_strdup ("sip:jack@sip.antisip.com");
+//  proxy = osip_strdup ("sip:sip.antisip.com");
+//  fromuser = osip_strdup ("sip:jack@sip.antisip.com");
 
 #else
   for (;;) {
