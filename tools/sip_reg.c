@@ -46,7 +46,7 @@
 #endif
 #endif
 
-#if defined(_WIN32_WCE) || defined(WIN32)
+#ifdef _WIN32_WCE
 /* #include <syslog.h> */
 #include <winsock2.h>
 #endif
@@ -124,7 +124,7 @@ register_proc (void *arg)
   int reg;
 
   for (;;) {
-#if defined(_WIN32_WCE) || defined(WIN32)
+#ifdef _WIN32_WCE
     Sleep ((regparam->expiry / 2) * 1000);
 #else
     sleep (regparam->expiry / 2);
@@ -132,7 +132,7 @@ register_proc (void *arg)
     eXosip_lock (context_eXosip);
     reg = eXosip_register_send_register (context_eXosip, regparam->regid, NULL);
     if (0 > reg) {
-#if defined(_WIN32_WCE) || defined(WIN32)
+#ifdef _WIN32_WCE
       fprintf (stdout, "eXosip_register: error while registring");
 #else
       perror ("eXosip_register");
@@ -174,9 +174,9 @@ main (int argc, char *argv[])
   int debug = 0;
   int nofork = 0;
 
-#if defined(_WIN32_WCE) || defined(WIN32)
-//  proxy = osip_strdup ("sip:sip.antisip.com");
-//  fromuser = osip_strdup ("sip:jack@sip.antisip.com");
+#ifdef _WIN32_WCE
+  proxy = osip_strdup ("sip:sip.antisip.com");
+  fromuser = osip_strdup ("sip:jack@sip.antisip.com");
 
 #else
   for (;;) {
@@ -262,7 +262,7 @@ main (int argc, char *argv[])
     usage ();
     exit (1);
   }
-#if !defined(_WIN32_WCE) && !defined(WIN32)
+#ifndef _WIN32_WCE
   if (!nofork) {
     daemon (1, 0);
   }
