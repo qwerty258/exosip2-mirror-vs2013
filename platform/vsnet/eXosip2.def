@@ -7,6 +7,7 @@ eXosip_quit
 eXosip_set_option
 eXosip_lock
 eXosip_unlock
+eXosip_execute
 eXosip_listen_addr
 eXosip_set_socket
 eXosip_set_user_agent
