@@ -82,7 +82,7 @@
       <PreprocessorDefinitions>HAVE_CARES_H;SRV_RECORD;HAVE_OPENSSL_SSL_H;ENABLE_TRACE;WIN32;EXOSIP_EXPORTS;_WINDOWS;_USRDLL;_DEBUG;_MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <BrowseInformation>false</BrowseInformation>
       <WarningLevel>Level3</WarningLevel>
@@ -96,6 +96,7 @@
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Precise</FloatingPointModel>
       <StringPooling>true</StringPooling>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OPENSSLSDK32)\lib;$(OSIPSDK)\lib\32bit;$(CARESSDK)\lib\32bit;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -105,6 +106,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>false</OptimizeReferences>
       <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -114,7 +116,7 @@
       <PreprocessorDefinitions>HAVE_CARES_H;SRV_RECORD;HAVE_OPENSSL_SSL_H;ENABLE_TRACE;WIN32;EXOSIP_EXPORTS;_WINDOWS;_USRDLL;_DEBUG;_MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <BrowseInformation>false</BrowseInformation>
@@ -128,6 +130,7 @@
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Precise</FloatingPointModel>
       <StringPooling>true</StringPooling>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OPENSSLSDK64)\lib;$(OSIPSDK)\lib\64bit;$(CARESSDK)\lib\64bit;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -137,6 +140,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>.\eXosip2.def</ModuleDefinitionFile>
       <SubSystem>Console</SubSystem>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -170,7 +174,7 @@
     <Link>
       <AdditionalLibraryDirectories>$(OPENSSLSDK32)\lib;$(OSIPSDK)\lib\32bit;$(CARESSDK)\lib\32bit;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ssleay32.lib;libeay32.lib;libcares.lib;osipparser2.lib;osip2.lib;Dnsapi.lib;Crypt32.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
       <ModuleDefinitionFile>.\eXosip2.def</ModuleDefinitionFile>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -207,7 +211,7 @@
     <Link>
       <AdditionalLibraryDirectories>$(OPENSSLSDK64)\lib;$(OSIPSDK)\lib\64bit;$(CARESSDK)\lib\64bit;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ssleay32.lib;libeay32.lib;libcares.lib;osipparser2.lib;osip2.lib;Dnsapi.lib;Crypt32.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
       <ModuleDefinitionFile>.\eXosip2.def</ModuleDefinitionFile>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
